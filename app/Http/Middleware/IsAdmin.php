@@ -15,10 +15,12 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->user()->role !== 'admin') {
+        /*if (auth()->user()->role !== 'admin') {
+            abort(403);
+        }*/
+        if (!auth()->check() || !auth()->user()->isAdmin()) {
             abort(403);
         }
-        
 
         return $next($request);
     }
