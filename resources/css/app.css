@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.admin-table th {
+    @apply bg-gray-100 text-left p-4;
+}
+.admin-table td {
+    @apply p-4 border-b;
+}
