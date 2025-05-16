@@ -28,7 +28,7 @@
             </thead>
             <tbody>
                 @foreach($users as $user)
-                    @include('admin.users.partials._user-row', ['user' => $user])
+                    @include('admin.users.partials.user-row', ['user' => $user])
                 @endforeach
             </tbody>
         </table>
